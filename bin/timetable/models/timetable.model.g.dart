@@ -13,5 +13,5 @@ Timetable _$TimetableFromJson(Map<String, dynamic> json) => Timetable(
     );
 
 Map<String, dynamic> _$TimetableToJson(Timetable instance) => <String, dynamic>{
-      'events': instance.events,
+      'events': instance.events.map((e) => e.toJson()).toList(),
     };

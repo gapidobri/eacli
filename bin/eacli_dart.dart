@@ -86,5 +86,5 @@ Future<void> today() async {
     return;
   }
 
-  print(response.body);
+  print(response.body?.toJson());
 }
