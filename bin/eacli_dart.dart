@@ -18,6 +18,12 @@ final dateFormat = DateFormat('yyyy-MM-dd');
 final displayFormat = DateFormat('dd. M. yyyy');
 
 void main(List<String> arguments) async {
+  if (arguments.isEmpty) {
+    print('eACLI - eAsistent CLI Tool');
+    print('https://github.com/gapidobri/eacli');
+    return;
+  }
+
   initApi();
   await StorageService.init();
 
