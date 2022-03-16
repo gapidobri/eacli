@@ -7,7 +7,6 @@ part of 'event.model.dart';
 // **************************************************************************
 
 Event _$EventFromJson(Map<String, dynamic> json) => Event(
-      classroom: json['classroom'] as String,
       color: json['color'] as String,
       date: json['date'] as String,
       from: json['from'] as String,
@@ -17,6 +16,7 @@ Event _$EventFromJson(Map<String, dynamic> json) => Event(
       title: json['title'] as String,
       titleShort: json['title_short'] as String,
       type: json['type'] as String,
+      classroom: json['classroom'] as String?,
       lesson: json['lesson'] as String?,
     );
 

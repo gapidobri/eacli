@@ -4,7 +4,7 @@ part 'event.model.g.dart';
 
 @JsonSerializable()
 class Event {
-  final String classroom;
+  final String? classroom;
   final String color;
   final String date;
   final String from;
@@ -17,7 +17,6 @@ class Event {
   final String type;
 
   const Event({
-    required this.classroom,
     required this.color,
     required this.date,
     required this.from,
@@ -26,6 +25,7 @@ class Event {
     required this.title,
     required this.titleShort,
     required this.type,
+    this.classroom,
     this.lesson,
   });
 

@@ -6,8 +6,8 @@ eAsistent CLI Tool
 
 - [x] Login
 - [x] Logout
-- [ ] Timetable for this day **(in progress)**
-- [ ] Weekly timetable
+- [x] Timetable for this day
+- [x] Weekly timetable
 - [ ] Grades
 - [ ] Messages
 
@@ -24,5 +24,6 @@ dart compile exe -o eacli bin/eacli_dart.dart
 ```bash
 ./eacli login
 ./eacli logout
-./eacli today # Currently just spits out JSON
+./eacli day [offset] # Displays timetable for this day with optional offset in days
+./eacli week [offset] # Displays timetable for this week with optional offset in weeks
 ```
