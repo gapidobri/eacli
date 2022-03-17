@@ -134,9 +134,6 @@ Future<void> day([int? offset]) async {
     ],
     border: Border.all,
     style: Style.mysql,
-    align: {
-      'Classroom': Side.center,
-    },
   );
 
   print('\n${displayFormat.format(now)}\n');
@@ -180,7 +177,7 @@ Future<void> week([int? offset]) async {
   final dayLength = dayMapValues.fold<int>(0, (max, curr) => curr.length > max ? curr.length : max);
 
   final List<List<String>> dayList = List.generate(dayLength, (_) => List.generate(5, (_) => ''));
-  for (int i = 0; i < dayMapValues.length; i++) {
+  for (int i = 0; i < dayMapValues.length - 1; i++) {
     for (int j = 0; j < dayMapValues[i].length; j++) {
       dayList[j][i] = dayMapValues[i][j];
     }
